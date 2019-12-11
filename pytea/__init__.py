@@ -84,7 +84,11 @@ class API(object):
 
         func = getattr(requests, method)
         final_uri = ''.join([self._baseuri, path])
-        return func(final_uri, params=params)
+        body=None
+        if "body" in params:
+          body = params["body"]
+          params = { "token": params["token"] }
+        return func(final_uri, headers = {'Content-type': 'application/json'}, params=params, data = json.dumps(body) )
 
 
     def clean_resource_params(self, resource_path, params):

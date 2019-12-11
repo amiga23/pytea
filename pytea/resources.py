@@ -228,6 +228,13 @@ resources = {
             }
         }
     },
+    u'/orgs': {
+        u'post': {
+            "parameters": {
+                u'body': True
+            }
+        }
+    },
     u'/orgs/{org}': {
         u'get': {
             'parameters': {

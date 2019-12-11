@@ -231,13 +231,7 @@ resources = {
     u'/orgs': {
         u'post': {
             "parameters": {
-                u'repo_admin_change_team_access': True,
-                u'username': True,
-                u'visibility': False,
-                u'website': False,
-                u'location': False,
-                u'full_name': False,
-                u'description': False
+                u'body': False
             }
         }
     },

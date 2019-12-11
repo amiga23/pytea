@@ -246,6 +246,11 @@ resources = {
                 u'body': False,
                 u'org': True
             }
+        },
+        u'delete': {
+            'parameters': {
+                u'org': True
+            }
         }
     },
     u'/users/{username}/followers': {

@@ -35,7 +35,6 @@ resources = {
     u'/orgs/{org}/actions/secrets/{secretname}': {
         u'put': {
             'parameters': {
-                u'body': True,
                 u'org': True,
                 u'secretname': True
             }

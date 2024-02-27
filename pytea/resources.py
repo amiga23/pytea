@@ -41,7 +41,7 @@ resources = {
             }
         },
         u'delete': {
-            'parameters': {}
+            'parameters': {
                 u'body': False,
                 u'org': True,
                 u'secretname': True

@@ -1,4 +1,140 @@
 resources = {
+    u'/orgs': {
+        u'post': {
+            "parameters": {
+                u'body': False
+            }
+        }
+    },
+    u'/orgs/{org}': {
+        u'get': {
+            'parameters': {
+                u'org': True
+            }
+        },
+        u'patch': {
+            'parameters': {
+                u'body': False,
+                u'org': True
+            }
+        },
+        u'delete': {
+            'parameters': {
+                u'org': True
+            }
+        }
+    },
+    u'/orgs/{org}/actions/secrets': {
+        u'get': {
+            'parameters': {
+                u'body': False,
+                u'org': True
+            }
+        }
+    },
+    u'/orgs/{org}/actions/secrets/{secretname}': {
+        u'put': {
+            'parameters': {
+                u'body': True,
+                u'org': True
+            }
+        },
+        u'delete': {
+            'parameters': {}
+                u'body': False,
+                u'org': True
+            }
+        }
+    },
+    u'/orgs/{org}/hooks': {
+        u'get': {
+            'parameters': {}
+        }
+    },
+    u'/orgs/{org}/hooks/': {
+        u'post': {
+            'parameters': {}
+        }
+    },
+    u'/orgs/{org}/hooks/{id}': {
+        u'get': {
+            'parameters': {}
+        },
+        u'delete': {
+            'parameters': {}
+        },
+        u'patch': {
+            'parameters': {}
+        }
+    },
+    u'/orgs/{org}/members': {
+        u'get': {
+            'parameters': {
+                u'org': True
+            }
+        }
+    },
+    u'/orgs/{org}/members/{username}': {
+        u'get': {
+            'parameters': {
+                u'username': True,
+                u'org': True
+            }
+        },
+        u'delete': {
+            'parameters': {
+                u'username': True,
+                u'org': True
+            }
+        }
+    },
+    u'/orgs/{org}/public_members': {
+        u'get': {
+            'parameters': {
+                u'org': True
+            }
+        }
+    },
+    u'/orgs/{org}/public_members/{username}': {
+        u'put': {
+            'parameters': {
+                u'username': True,
+                u'org': True
+            }
+        },
+        u'get': {
+            'parameters': {
+                u'username': True,
+                u'org': True
+            }
+        },
+        u'delete': {
+            'parameters': {
+                u'username': True,
+                u'org': True
+            }
+        }
+    },
+    u'/orgs/{org}/repos': {
+        u'get': {
+            'parameters': {
+                u'org': True
+            }
+        }
+    },
+    u'/orgs/{org}/teams': {
+        u'post': {
+            'parameters': {
+                u'body': False,
+                u'org': True
+            }
+        },
+        u'get': {
+            'parameters': {
+                u'org': True
+            }
+        }
+    },
     u'/user/times': {
         u'get': {
             'parameters': {}
@@ -34,13 +170,6 @@ resources = {
                 u'owner': True,
                 u'repo': True,
                 u'sha': True
-            }
-        }
-    },
-    u'/orgs/{org}/members': {
-        u'get': {
-            'parameters': {
-                u'org': True
             }
         }
     },
@@ -133,13 +262,6 @@ resources = {
             }
         }
     },
-    u'/orgs/{org}/public_members': {
-        u'get': {
-            'parameters': {
-                u'org': True
-            }
-        }
-    },
     u'/teams/{id}': {
         u'get': {
             'parameters': {
@@ -225,31 +347,6 @@ resources = {
         u'post': {
             'parameters': {
                 u'body': False
-            }
-        }
-    },
-    u'/orgs': {
-        u'post': {
-            "parameters": {
-                u'body': False
-            }
-        }
-    },
-    u'/orgs/{org}': {
-        u'get': {
-            'parameters': {
-                u'org': True
-            }
-        },
-        u'patch': {
-            'parameters': {
-                u'body': False,
-                u'org': True
-            }
-        },
-        u'delete': {
-            'parameters': {
-                u'org': True
             }
         }
     },
@@ -369,11 +466,6 @@ resources = {
             }
         }
     },
-    u'/orgs/{org}/hooks': {
-        u'get': {
-            'parameters': {}
-        }
-    },
     u'/repos/{owner}/{repo}/issue/{index}/labels/{id}': {
         u'delete': {
             'parameters': {
@@ -434,13 +526,6 @@ resources = {
             }
         }
     },
-    u'/orgs/{org}/repos': {
-        u'get': {
-            'parameters': {
-                u'org': True
-            }
-        }
-    },
     u'/users/{username}/following': {
         u'get': {
             'parameters': {
@@ -474,14 +559,6 @@ resources = {
         u'post': {
             'parameters': {
                 u'username': True
-            }
-        }
-    },
-    u'/org/{org}/repos': {
-        u'post': {
-            'parameters': {
-                u'body': False,
-                u'org': True
             }
         }
     },
@@ -606,11 +683,6 @@ resources = {
             }
         }
     },
-    u'/orgs/{org}/hooks/': {
-        u'post': {
-            'parameters': {}
-        }
-    },
     u'/user/subscriptions': {
         u'get': {
             'parameters': {}
@@ -630,19 +702,6 @@ resources = {
                 u'repo': True,
                 u'id': True,
                 u'string': False
-            }
-        }
-    },
-    u'/orgs/{org}/teams': {
-        u'post': {
-            'parameters': {
-                u'body': False,
-                u'org': True
-            }
-        },
-        u'get': {
-            'parameters': {
-                u'org': True
             }
         }
     },
@@ -724,17 +783,6 @@ resources = {
                 u'owner': True,
                 u'repo': True
             }
-        }
-    },
-    u'/orgs/{org}/hooks/{id}': {
-        u'get': {
-            'parameters': {}
-        },
-        u'delete': {
-            'parameters': {}
-        },
-        u'patch': {
-            'parameters': {}
         }
     },
     u'/repos/{owner}/{repo}/hooks/{id}': {
@@ -823,40 +871,6 @@ resources = {
         u'post': {
             'parameters': {
                 u'username': True
-            }
-        }
-    },
-    u'/orgs/{org}/members/{username}': {
-        u'get': {
-            'parameters': {
-                u'username': True,
-                u'org': True
-            }
-        },
-        u'delete': {
-            'parameters': {
-                u'username': True,
-                u'org': True
-            }
-        }
-    },
-    u'/orgs/{org}/public_members/{username}': {
-        u'put': {
-            'parameters': {
-                u'username': True,
-                u'org': True
-            }
-        },
-        u'get': {
-            'parameters': {
-                u'username': True,
-                u'org': True
-            }
-        },
-        u'delete': {
-            'parameters': {
-                u'username': True,
-                u'org': True
             }
         }
     },

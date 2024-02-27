@@ -36,13 +36,15 @@ resources = {
         u'put': {
             'parameters': {
                 u'body': True,
-                u'org': True
+                u'org': True,
+                u'secretname': True
             }
         },
         u'delete': {
             'parameters': {}
                 u'body': False,
-                u'org': True
+                u'org': True,
+                u'secretname': True
             }
         }
     },

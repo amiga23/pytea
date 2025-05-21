@@ -318,7 +318,7 @@ resources = {
     u'/users/{username}/tokens': {
         u'post': {
             'parameters': {
-                u'name': False
+                u'body': False
             }
         },
         u'get': {
